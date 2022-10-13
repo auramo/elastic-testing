@@ -12,5 +12,5 @@ https://github.com/jtibshirani/text-embeddings/blob/blog/src/main.py
 
 ```
 docker network create verkko1
-docker run -d --name elasticsearch --net verkko1 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.17.6
+sudo docker run -e ES_JAVA_OPTS="-Xms1g -Xmx1g" -d --name elasticsearch --net verkko1 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.17.6
 ```
